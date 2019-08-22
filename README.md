@@ -6,4 +6,4 @@
 - 除了CEGUI提供的依赖库以外还需要freegult(已编译好)。
 
 ### 例子列表
-- helloworld:CEGUI的helloworld。
+- helloworld：CEGUI的helloworld。

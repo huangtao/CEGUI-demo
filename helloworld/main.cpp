@@ -122,6 +122,7 @@ void create_window()
     using namespace CEGUI;
     WindowManager &wmgr = WindowManager::getSingleton();
 
+    // root是铺满整个窗口的，它是一个空窗口(全透明)
     Window *myRoot = wmgr.createWindow("DefaultWindow", "root");
     System::getSingleton().getDefaultGUIContext().setRootWindow(myRoot);
 
@@ -129,9 +130,16 @@ void create_window()
         wmgr.createWindow("TaharezLook/FrameWindow", "testWindow"));
     myRoot->addChild(fWnd);
 
-    // 窗口位置和大小
+    // 窗口位置(窗口左上角位于父窗口的位置)
+    // UDim(a,b)
+    // a - 相对量 b - 绝对量
+    // 本例子中窗口宽度为640
+    // UVector2(UDim(0.0f, 10.0f), UDim(0.0f, 0.0f)) - 窗口左上角位于(10,0)
+    // UVector2(UDim(0.5f, 10.0f), UDim(0.0f, 0.0f)) - 窗口左上角位于(640*0.5+10,0)
     fWnd->setPosition(UVector2(UDim(0.25f, 0.0f), UDim(0.25f, 0.0f)));
+    // 窗口大小
     fWnd->setSize(USize(UDim(0.5f, 0.0f), UDim(0.5f, 0.0f)));
+    //fWnd->setMaxSize(USize(cegui_reldim(1.0f), cegui_reldim(1.0f)));
 
     // 标题
     fWnd->setText("Hello World!");

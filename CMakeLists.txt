@@ -1,16 +1,8 @@
-# **********************************************************************
-# A library for poker and majang application.
-# It's provide common poker and majang algorithm.
-#
-# Copyright (C) 2013 Huang Tao <huangtao117@yeah.net> QQ:409577078
-#
-# **********************************************************************
-
 # CMake版本要求
 cmake_minimum_required(VERSION 3.10)
 
 # 项目名称
-project(qipai)
+project(CEGUIDemo)
 
 MESSAGE(STATUS "operation system is ${CMAKE_SYSTEM}")
 
@@ -44,9 +36,17 @@ elseif(CMAKE_CXX_COMPILER_ID MATCHES "MSVC")
 endif()
 
 include_directories (
-	${PROJECT_SOURCE_DIR}
-	${PROJECT_SOURCE_DIR}/3rdparty
+	${PROJECT_SOURCE_DIR}/dependencies/include
 )
 
+link_directories (
+	${PROJECT_SOURCE_DIR}/dependencies/lib
+	${PROJECT_SOURCE_DIR}/dependencies/lib/dynamic
+	${PROJECT_SOURCE_DIR}/dependencies/lib/static
+)
+
+# 输出到bin目录
+SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_BINARY_DIR}/bin) 
+
 # 包含子目录
-add_subdirectory(src)
+add_subdirectory(helloworld)

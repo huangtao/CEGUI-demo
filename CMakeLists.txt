@@ -35,14 +35,17 @@ elseif(CMAKE_CXX_COMPILER_ID MATCHES "MSVC")
 	add_compile_options(/W4)
 endif()
 
+# 头文件目录和库目录
 include_directories (
-	${PROJECT_SOURCE_DIR}/dependencies/include
+	d:/CEGUI/cegui-0.8.7/dependencies/include
+	d:/CEGUI/cegui-0.8.7/cegui/include
+	d:/CEGUI/cegui-0.8.7/build/cegui/include
 )
-
 link_directories (
-	${PROJECT_SOURCE_DIR}/dependencies/lib
-	${PROJECT_SOURCE_DIR}/dependencies/lib/dynamic
-	${PROJECT_SOURCE_DIR}/dependencies/lib/static
+	d:/CEGUI/cegui-0.8.7/dependencies/lib
+	d:/CEGUI/cegui-0.8.7/dependencies/lib/dynamic
+	d:/CEGUI/cegui-0.8.7/dependencies/lib/static
+	d:/CEGUI/cegui-0.8.7/build/lib
 )
 
 # 输出到bin目录

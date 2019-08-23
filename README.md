@@ -15,4 +15,4 @@
 * glm headers (as part of CEGUIBase)
 
 ### 例子列表
-- helloworld：CEGUI的helloworld。
+- helloworld：CEGUI的helloworld。基本的CEGUI结构，一个窗口和一个按钮。

@@ -1,18 +1,7 @@
 # CEGUI入门例子
 
 ### 说明
-- 必须使用Visual Studio 2015编译（其他版本需要自行编译依赖库）。
-- cmake后用vs2015生成可执行文件后将dependencies\bin目录下的文件拷贝的可执行文件目录。
-- 除了CEGUI提供的依赖库以外还需要GLFW(已编译好)。
-
-### 依赖列表
-* CEGUIBase
-* CEGUIOpenGLRenderer
-* CEGUICoreWindowRendererSet
-* default CEGUI xml parser (and dependencies)
-* GLFW3
-* OpengGL
-* glm headers (as part of CEGUIBase)
+除了CEGUI还依赖GLFW3(CEGUI自带的版本2的)，GLFW3请自行下载编译(也放入CEGUI依赖目录中)。Windows平台请修改CMakeLists.txt中的目录(改成你的目录)。编译成功后将可执行文件拷贝到CEGUI编译输出的目录即可。
 
 ### 例子列表
 - helloworld：CEGUI的helloworld。基本的CEGUI结构，一个窗口和一个按钮。
